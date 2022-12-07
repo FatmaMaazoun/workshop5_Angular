@@ -1,0 +1,20 @@
+
+<h1>Liste des Todos</h1>
+<table>
+  <tr>
+    <th>UserId</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Completed</th>
+  </tr>
+    <tr *ngFor="let t of listeTodo"> 
+    <td>{{t.userId}}</td>
+    <td> {{t.id}}  </td>
+    <td> {{t.title}}</td>
+    <td>{{t.completed}}</td> 
+  </tr>
+</table>
+<pre>
+<button id="bilan" (click)="getNumberofElement()">Bilan</button><ng-container *ngIf="bilan==true"><h3>le nombre de todo completed = {{nbelement}}  , le nombre Total des todo ={{listeTodo.length}}</h3> 
+</ng-container>
+</pre>
